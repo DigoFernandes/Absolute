@@ -16,16 +16,24 @@
   font-weight: 700;
 }
 
-.header{
-    display: flex;
-    align-items: center;
-    
-    width: 100%;
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
 }
 
-.backBtn{
-    background: transparent;
-    border: none;
-    cursor: pointer;
+.backBtn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
 
+.cardList {
+  display: grid;
+  width: 100%;
+  gap: 40px;
+  grid-template-columns: repeat(auto-fill, 310px);
+  align-items: center;
+  justify-content: center;
 }
