@@ -28,7 +28,7 @@ export default function DrinkPage({ searchParams }: DrinkPageProps) {
         url: "https://the-cocktail-db.p.rapidapi.com/randomselection.php",
         headers: {
           "X-RapidAPI-Key":
-            "9cd95f0abdmsh83e474f24b7c8c1p198492jsn0b1a4e6abfa5",
+            "",
           "X-RapidAPI-Host": "the-cocktail-db.p.rapidapi.com",
         },
       };
