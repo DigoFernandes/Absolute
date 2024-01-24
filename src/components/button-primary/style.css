@@ -1,0 +1,17 @@
+.btn-primary {
+  border-radius: 32px;
+  background: linear-gradient(
+    90deg,
+    rgba(241, 50, 85, 1) 0%,
+    rgba(209, 52, 209, 1) 100%
+  );
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  height: 50px;
+  border: none;
+  padding: 12px 32px;
+  width: 100%;
+  max-width: 460px;
+}

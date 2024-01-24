@@ -1,0 +1,35 @@
+.primary-input {
+  border: 5px solid transparent;
+  border-radius: 32px;
+
+  max-width: 460px;
+  width: 100%;
+  padding: 8px;
+
+  position: absolute;
+  height: 50px;
+  background-color: rgb(0,0,0,0.8);
+  color: white;
+
+  font-weight: 600;
+  text-align: center;
+}
+
+.input-wrapper {
+  background: linear-gradient(
+      to right,
+      rgba(241, 50, 85, 1) 0%,
+      rgba(209, 52, 209, 1) 100%
+    );
+  border-radius: 32px;
+  max-width: 460px;
+  width: 100%;
+  height: 50px;
+  position: relative;
+  padding: 2px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: content-box;
+}
