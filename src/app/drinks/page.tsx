@@ -1,10 +1,11 @@
-"use client"
+"use client";
 
 import { BackIcon } from "@/components/icons/back-icon";
 import styles from "./page.module.css";
 import { Card } from "@/components/card";
 import { useRouter } from "next/navigation";
-
+import { useEffect, useState } from "react";
+import axios from "axios";
 interface DrinkPageProps {
   searchParams: {
     search: string;
@@ -15,8 +16,34 @@ export default function DrinkPage({ searchParams }: DrinkPageProps) {
 
   console.log(searchParams.search);
 
-  const handleGoToHome = () => {  
+  const handleGoToHome = () => {
     router.push("/");
+  };
+
+  const Drinks = () => {
+    const [cocktailDataList, setCocktailDataList] = useState([]);
+    const fetchData = async () => {
+      const options = {
+        method: "GET",
+        url: "https://the-cocktail-db.p.rapidapi.com/randomselection.php",
+        headers: {
+          "X-RapidAPI-Key":
+            "9cd95f0abdmsh83e474f24b7c8c1p198492jsn0b1a4e6abfa5",
+          "X-RapidAPI-Host": "the-cocktail-db.p.rapidapi.com",
+        },
+      };
+
+      try {
+        const response = await axios.request(options);
+        setCocktailDataList(response.data);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
+    useEffect(() => {
+      fetchData();
+    }, []); 
   };
 
   return (

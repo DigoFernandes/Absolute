@@ -7,17 +7,22 @@ import { PrimaryButton } from "../components/button-primary";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 
+
 export default function Home() {
   const [search, setSearch] = useState("");
   const router = useRouter();
 
   const handleChange = (value: string) => {
     setSearch(value);
-  };  
+  };
 
-  const handleNavigate = (value : string) => {
-    router.push("drinks?search=" + value)
-  }
+  const handleNavigate = (value: string) => {
+    router.push("drinks?search=" + value);
+  };
+
+
+
+
 
   return (
     <main className={styles.main}>
@@ -28,7 +33,10 @@ export default function Home() {
         onChange={handleChange}
       />
       <p className={styles.paragraph}>or</p>
-      <PrimaryButton label="Get Surprised!" onClick={() => handleNavigate("random")} />
+      <PrimaryButton
+        label="Get Surprised!"
+        onClick={() => handleNavigate("random")}
+      />
     </main>
   );
 }
